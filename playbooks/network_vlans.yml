@@ -17,7 +17,7 @@
   #   vlan_id: 20
 
   tasks:
-    - name: assert that VLAN config was sent
+    - name: assert tshat VLAN config was sent
       assert:
         that:
           - vlan_config != ''
