@@ -1,6 +1,6 @@
 ---
 - name: configure network VLANs
-  hosts: all
+  hosts: arista
   gather_facts: no
   vars:
     - vlan_state:  "{{ net_vlan_state | default('merged') }}"
@@ -17,7 +17,7 @@
   #   vlan_id: 20
 
   tasks:
-    - name: assert tshat VLAN config was sent
+    - name: assert that VLAN config was sent
       assert:
         that:
           - vlan_config != ''
